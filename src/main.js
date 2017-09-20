@@ -10,11 +10,10 @@ var Authors = require('./components/authors/authorPage');
     var App = React.createClass({
         render: function () {
             var Child;
-
             switch(this.props.route) {
                 case 'about': Child = About; break;
                 case 'authors': Child = Authors; break;
-                default: Child = Home;
+                default: Child = Home; break;
             }
 
             return (
@@ -30,7 +29,8 @@ var Authors = require('./components/authors/authorPage');
         var route = win.location.hash.substr(1);
         React.render(<App route={route} />, document.getElementById('app'));
     }
-
-    win.addEventListener('hashchange', render);
+    
     render();
+    win.addEventListener('hashchange', render);
+    
 })(window);

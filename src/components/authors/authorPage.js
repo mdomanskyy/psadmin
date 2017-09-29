@@ -22,8 +22,7 @@ var AuthorPage = React.createClass({
         AuthorStore.removeChangeListener(this._onChange);
     },
     
-    _onChange: function() {
-        debugger;
+    _onChange: function() { 
         this.setState({authors: AuthorStore.getAllAuthors()});
     },
         

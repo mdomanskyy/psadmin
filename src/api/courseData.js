@@ -1,5 +1,5 @@
 module.exports = {
-	courses: [
+    courses: [
 		{  
 			id: "clean-code",
 			title: "Clean Code: Writing Code for Humans",
